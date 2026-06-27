@@ -1,0 +1,342 @@
+/* =========================
+   RESET BÁSICO
+   ========================= */
+/*
+   Empiezo aplicando un reset básico para eliminar los márgenes
+   y rellenos que los navegadores ponen por defecto.
+   De esta forma parto de una base limpia y consistente.
+*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* =========================
+   VARIABLES CSS
+   ========================= */
+/*
+   Defino variables para los colores principales del proyecto.
+   Así puedo reutilizarlos fácilmente y mantener un diseño
+   más ordenado y coherente.
+*/
+:root {
+    --verde: #2e7d32;
+    --gris-texto: #333;
+    --gris-claro: #f5f5f5;
+}
+
+/* =========================
+   ESTILOS GENERALES
+   ========================= */
+/*
+   Aplico el estilo general de la web: tipo de letra,
+   color del texto, fondo y separación entre líneas
+   para mejorar la legibilidad.
+*/
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    color: var(--gris-texto);
+    background-color: white;
+    line-height: 1.6;
+}
+
+/* =========================
+   HEADER
+   ========================= */
+/*
+   El header se organiza con Flexbox para colocar
+   el logo a la izquierda y el menú a la derecha.
+   También se deja fijo arriba al hacer scroll.
+*/
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: white;
+    border-bottom: 1px solid #ddd;
+    position: sticky;
+    top: 0;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--verde);
+}
+
+/*
+   Estilo de los enlaces del menú de navegación.
+*/
+.nav a {
+    margin-left: 1rem;
+    text-decoration: none;
+    color: var(--gris-texto);
+}
+
+/*
+   Efecto visual al pasar el ratón por encima
+   para mejorar la experiencia de usuario.
+*/
+.nav a:hover {
+    color: var(--verde);
+}
+
+/* =========================
+   HERO
+   ========================= */
+/*
+   Sección principal de bienvenida.
+   El contenido se centra y se le da
+   más espacio para destacar el mensaje.
+*/
+.hero {
+    text-align: center;
+    padding: 4rem 2rem;
+    background-color: var(--gris-claro);
+}
+
+.hero h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+/*
+   Botón principal reutilizable en la web.
+*/
+.btn-principal {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.7rem 1.8rem;
+    background-color: var(--verde);
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+}
+
+/*
+   Cambio de color al pasar el ratón.
+*/
+.btn-principal:hover {
+    background-color: #256428;
+}
+
+/* =========================
+   CATEGORÍAS
+   ========================= */
+/*
+   Sección donde se muestran las categorías del supermercado.
+*/
+.categorias {
+    padding: 3rem 2rem;
+}
+
+/*
+   Uso CSS Grid para mostrar las categorías
+   de forma ordenada y adaptable.
+*/
+.grid-categorias {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+/*
+   Tarjeta individual de cada categoría.
+*/
+.card {
+    padding: 2rem;
+    background-color: var(--gris-claro);
+    text-align: center;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/*
+   Efecto hover para indicar que es clicable.
+*/
+.card:hover {
+    background-color: #e0e0e0;
+}
+
+/* =========================
+   PRODUCTOS DESTACADOS
+   ========================= */
+/*
+   Sección para mostrar productos destacados
+   o listados de productos.
+*/
+.destacados {
+    padding: 3rem 2rem;
+    background-color: white;
+}
+
+/*
+   Grid para mostrar productos de forma
+   responsive y ordenada.
+*/
+.grid-productos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin-top: 1.5rem;
+}
+
+/*
+   Tarjeta de producto.
+*/
+.producto {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1rem;
+    text-align: center;
+}
+
+/*
+   Imagen del producto adaptada al contenedor.
+*/
+.producto img {
+    width: 100%;
+    max-height: 150px;
+    object-fit: cover;
+}
+
+.precio {
+    font-weight: bold;
+    margin: 0.5rem 0;
+}
+
+/*
+   Botón secundario para acciones como
+   ver producto o añadir al carrito.
+*/
+.btn-secundario {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: var(--verde);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+/* =========================
+   FOOTER
+   ========================= */
+/*
+   Pie de página simple y centrado.
+*/
+.footer {
+    text-align: center;
+    padding: 1.5rem;
+    background-color: var(--gris-claro);
+    margin-top: 2rem;
+}
+
+/* =========================
+   PÁGINA DE PRODUCTO
+   ========================= */
+/*
+   Estilos específicos para la vista
+   de detalle de un producto.
+*/
+.producto-detalle {
+    padding: 3rem 2rem;
+}
+
+/*
+   Uso Flexbox para colocar la imagen
+   y la información del producto en columnas.
+*/
+.producto-contenido {
+    display: flex;
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.producto-imagen img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 8px;
+}
+
+.producto-info {
+    flex: 1;
+}
+
+.producto-info h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.precio-detalle {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--verde);
+    margin-bottom: 0.5rem;
+}
+
+.disponibilidad {
+    color: green;
+    margin-bottom: 1rem;
+}
+
+.descripcion {
+    margin-bottom: 1rem;
+}
+
+.valoracion {
+    margin-bottom: 1.5rem;
+}
+
+/* =========================
+   TRANSICIONES
+   ========================= */
+/*
+   Transiciones suaves para mejorar
+   la experiencia de usuario.
+*/
+a, .card, .producto, button {
+    transition: all 0.3s ease;
+}
+
+.card:hover,
+.producto:hover {
+    transform: translateY(-5px);
+}
+
+/* =========================
+   MEDIA QUERIES (RESPONSIVE)
+   ========================= */
+/*
+   Adaptación del diseño a pantallas
+   pequeñas como móviles.
+*/
+@media (max-width: 768px) {
+
+    /* Oculto el menú para simplificar la vista móvil */
+    .nav {
+        display: none;
+    }
+
+    /* Ajusto el tamaño del texto principal */
+    .hero h1 {
+        font-size: 1.6rem;
+    }
+
+    /* Paso las grids a una sola columna */
+    .grid-categorias,
+    .grid-productos {
+        grid-template-columns: 1fr;
+    }
+
+    /* Reorganizo la página de producto */
+    .producto-contenido {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+}
