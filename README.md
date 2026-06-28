@@ -18,4 +18,4 @@ El objetivo de este proyecto ha sido seguir mejorando mis habilidades en desarro
 
 Este proyecto forma parte de mi portfolio personal, donde voy recopilando diferentes trabajos para seguir aprendiendo y evolucionando como desarrollador.
 
-👨‍💻 **Áyax López**
+👨‍💻 **Ayax López**
